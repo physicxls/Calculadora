@@ -13,12 +13,14 @@ import java.util.Scanner;
 public class Calculadora {
 
     /**
-     * @param args the command line arguments
+     * @param args the command line arguments ss
      */
     public static void main(String[] args) {
         
         Integer opcion = 0; 
         Integer opcionOperacion = 0;
+        
+        imprimirMenu();
        
         do{
       
@@ -109,6 +111,16 @@ public class Calculadora {
         } catch (NumberFormatException e){
             return null;
         }
+    }
+    
+    private static void imprimirMenu() {
+        System.out.println("=================");
+        System.out.println("   CALCULADORA   ");
+        System.out.println("=================");
+        System.out.println("1. SUMA");
+        System.out.println("2. RESTA");
+        System.out.println("3. MULTIPLICACION");
+        System.out.println("4. DIVISION");
     }
     
 }
