@@ -27,7 +27,7 @@ public class Calculadora {
             do{
                 String valor = leerValorConsola("Opcion: ");
                 opcion = convertirAEntero(valor);
-            } while (opcion == null || opcion > 5 || opcion < 1);
+            } while (opcion == null || opcion > 4 || opcion < 1);
             
             switch(opcion){
                 case 1:
@@ -86,24 +86,6 @@ public class Calculadora {
                         opcionOperacion = convertirAEntero(valor);
                     }while(opcionOperacion == null || opcionOperacion > 2 || opcionOperacion <= 1);
                     break;
-                case 5:
-                    do{
-                        imprimirOperacion("Potenciacion");
-                        String valor1 =leerValorConsola("Base: ");
-                        int val1=convertirAEntero(valor1);
-                        String valor2=leerValorConsola("Exponente: ");
-                        int val2=convertirAEntero(valor2);
-                        int resultado=1;
-                        for(int i=0;i<val2;i++){
-                            resultado=resultado*val1;
-                        }
-                        System.out.println("Resultado: "+resultado);
-                        System.out.println("1. Nueva potenciacio");
-                        System.out.println("2. Regresar al menu");
-                        String valor = leerValorConsola("Opcion: ");
-                        opcionOperacion = convertirAEntero(valor);
-                    }while (opcionOperacion == null || opcionOperacion > 2 || opcionOperacion < 1);
-                    break;
                 default:
                     System.out.println("Selecciona una opción valida");
             }
@@ -139,7 +121,6 @@ public class Calculadora {
         System.out.println("2. RESTA");
         System.out.println("3. MULTIPLICACION");
         System.out.println("4. DIVISION");
-        System.out.println("5. POTENCIACION");
     }
     
 }
